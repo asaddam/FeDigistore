@@ -1,0 +1,1 @@
+export const API = "https://digistore-api.herokuapp.com/api";
