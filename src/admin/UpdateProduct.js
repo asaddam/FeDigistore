@@ -67,7 +67,6 @@ const UpdateProduct = ({ match }) => {
         });
     };
 
-    // eslint-disable-next-line no-use-before-define
     useEffect(() => {
         init(match.params.productId);
     }, []);

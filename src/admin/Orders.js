@@ -33,7 +33,7 @@ const Orders = () => {
     useEffect(() => {
         loadOrders();
         loadStatusValues();
-    }, [loadOrders()]);
+    }, []);
 
     const showOrdersLength = () => {
         if (orders.length > 0) {
