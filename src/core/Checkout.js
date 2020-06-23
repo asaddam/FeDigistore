@@ -11,8 +11,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         instance: {},
         address: ''
     });
-
-    const userId = isAuthenticated() && isAuthenticated().user._id;
     
     const handleAddress = event => {
         setData({ ...data, address: event.target.value });
@@ -37,17 +35,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     const buy = () => {
         setData({ loading: true });
-        let nonce;
-        let getNonce = data.instance
-            .requestPaymentMethod()
-            .then(data => {
-                // console.log(data);
-                nonce = data.nonce;
-                const paymentData = {
-                    paymentMethodNonce: nonce,
-                    amount: getTotal(products)
-                };
-            });
     };
 
     const showDropIn = () => (

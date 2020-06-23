@@ -67,9 +67,10 @@ const UpdateProduct = ({ match }) => {
         });
     };
 
+    // eslint-disable-next-line no-use-before-define
     useEffect(() => {
         init(match.params.productId);
-    }, [init()]);
+    }, []);
 
     const handleChange = name => event => {
         const value = name === 'photo' ? event.target.files[0] : event.target.value;
